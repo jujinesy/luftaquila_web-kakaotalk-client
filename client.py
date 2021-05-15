@@ -7,11 +7,12 @@ import cryptoManager
 import time
 from packet import Packet
 from bson import BSON as bson
-import httpLogin
+import httpApi
 import json
 import struct
 import writer
-import chat
+from chat import Chat
+from channel import Channel
 
 class Client:
     def __init__(self, device_name="DEVICE", device_uuid="REVWSUNFMQ=="):
@@ -32,6 +33,9 @@ class Client:
         self.__processingSize = 0
 
         self.packetDict = {}
+        
+    def postText(self, chatId, li, text, notice=False):
+        httpApi.postText(chatId, li, text, notice, self.__accessKey, self.device_uuid)
         
     async def __recvPacket(self):
         encryptedBuffer = b""
@@ -91,13 +95,45 @@ class Client:
         self.loop.create_task(self.onPacket(packet))
         
         if packet.PacketName == "MSG":
-            self.loop.create_task(self.onMessage(chat.Chat(self.__writer, packet)))
+            body=packet.toJsonBody()
+            
+            chatId = body["chatLog"]["chatId"]
+            
+            if "li" in body:
+                li = body["li"]
+            else:
+                li = 0
+
+            channel = Channel(chatId, li, self.__writer)
+            chat = Chat(channel, body)
+
+            self.loop.create_task(self.onMessage(chat))
         
         if packet.PacketName == "NEWMEM":
-            self.loop.create_task(self.onJoin(packet))
-        
+            body=packet.toJsonBody()
+            
+            chatId = body["chatLog"]["chatId"]
+            
+            if "li" in body:
+                li = body["li"]
+            else:
+                li = 0
+                
+            channel = Channel(chatId, li, self.__writer)
+            self.loop.create_task(self.onJoin(channel))
+            
         if packet.PacketName == "DELMEM":
-            self.loop.create_task(self.onQuit(packet))
+            body=packet.toJsonBody()
+            
+            chatId = body["chatLog"]["chatId"]
+            
+            if "li" in body:
+                li = body["li"]
+            else:
+                li = 0
+                
+            channel = Channel(chatId, li, self.__writer)
+            self.loop.create_task(self.onQuit(channel))
     
     async def onPacket(self, packet):
         pass
@@ -105,10 +141,10 @@ class Client:
     async def onMessage(self, chat):
         pass
 
-    async def onJoin(self, packet):
+    async def onJoin(self, channel):
         pass
 
-    async def onQuit(self, packet):
+    async def onQuit(self, channel):
         pass
 
     async def __heartbeat(self):
@@ -118,13 +154,8 @@ class Client:
                                 "PING", 0, bson.encode({}))
             self.loop.create_task(self.__writer.sendPacket(PingPacket))
 
-    def run(self, LoginId, LoginPw):
-        self.loop = asyncio.get_event_loop()
-        self.loop.create_task(self.__login(LoginId, LoginPw))
-        self.loop.run_forever()
-
     async def __login(self, LoginId, LoginPw,):
-        r = json.loads(httpLogin.Login(
+        r = json.loads(httpApi.Login(
             LoginId, LoginPw, self.device_name, self.device_uuid))
 
         if r["status"] == -101:
@@ -155,7 +186,7 @@ class Client:
         self.__writer = writer.Writer(self.__crypto, self.__StreamWriter, self.packetDict)
 
         LoginListPacket = Packet(0, 0, "LOGINLIST", 0, bson.encode({
-            "appVer": "3.1.1.2441",
+            "appVer": "3.1.4",
             "prtVer": "1",
             "os": "win32",
             "lang": "ko",
@@ -163,7 +194,7 @@ class Client:
             "oauthToken": self.__accessKey,
             "dtype": 1,
             "ntype": 0,
-            "MCCMNC": "",
+            "MCCMNC": "999",
             "revision": 0,
             "chatIds": [],
             "maxIds": [],
@@ -179,3 +210,8 @@ class Client:
         self.loop.create_task(self.__recvPacket())
         self.loop.create_task(self.__heartbeat())
 
+        
+    def run(self, LoginId, LoginPw):
+        self.loop = asyncio.get_event_loop()
+        self.loop.create_task(self.__login(LoginId, LoginPw))
+        self.loop.run_forever()
