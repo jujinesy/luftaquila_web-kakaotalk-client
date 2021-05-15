@@ -1,0 +1,13 @@
+[Unit]
+Description=Node-kakao Server
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/luftaquila/HDD/kakao/server
+ExecStart=/usr/local/bin/node /home/luftaquila/HDD/kakao/server/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

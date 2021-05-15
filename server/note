@@ -1,0 +1,244 @@
+chat.channel.Name                                                                             
+                                                                                              
+                                                                                              
+chat.channel.RoomImageURL                                                                     
+                                                                                              
+                                                                                              
+chat.channel.ClientName                                                                       
+                                                                                              
+                                                                                              
+chat.channel.ClientRoomImageURL                                                               
+                                                                                              
+                                                                                              
+chat.channel.ChannelMetaList                                                                  
+[                                                                                             
+  {                                                                                           
+    type: 1,
+    revision: Long("2129404871096330240"),                                                    
+    authorId: Long("90639365"),                                                               
+    content: '경남 진주시 금산면 송백로 46, 사서함 306-34호 군수2학교 학생대대 806기 일반차량운전과정(46310) 이병 오병준',
+    updatedAt: 1574782041
+  }                                                                                           
+]                                                                                             
+                                                                                              
+chat.channel.DisplayUserInfoList                                                              
+[                                                                                             
+  ManagedDisplayUserInfo {                                                                    
+    user: ManagedChatUser {                                                                   
+      _events: [Object: null prototype] {},                                                   
+      _eventsCount: 0,
+      _maxListeners: undefined,                                                               
+      manager: [UserManager],
+      id: Long("90639365"),                                                                   
+      [Symbol(kCapture)]: false
+    },                                                                                        
+    displayStruct: {                                                                          
+      userId: Long("90639365"),                                                               
+      nickname: '최서원',
+      profileImageUrl: undefined                                                              
+    }                                                                                         
+  }                                                                                           
+]                                                                                             
+                                                                                              
+chat.channel.getDisplayName                                                                   
+최서원                                                                                           
+                                                                                              
+chat.channel.getDisplayProfileList                                                            
+[ undefined ]                                                                                 
+                                                                                              
+chat.channel.getUserInfoList                                                                  
+[                                                                                             
+  ManagedChatUserInfo {                                                                       
+    manager: UserManager { map: [Map], client: [TalkClient] },
+    user: ManagedChatUser {                                                                   
+      _events: [Object: null prototype] {},                                                   
+      _eventsCount: 0,
+      _maxListeners: undefined,                                                               
+      manager: [UserManager],
+      id: Long("90639365"),                                                                   
+      [Symbol(kCapture)]: false
+    },                                                                                        
+    memberStruct: {                                                                           
+      userId: Long("90639365"),                                                               
+      nickname: '최서원',
+      profileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlQmx4YTIq/pGIKojFefInqxvsl6jtKT
+0/049wv6_110x110_c.jpg',
+      fullProfileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlQmx4YTIq/pGIKojFefInqxvsl6
+jtKT0/049wv6_640x640_s.jpg',
+      originalProfileImageUrl: 'http://p.talk.kakao.co.kr/talkp/wlQmx4YTIq/pGIKojFefInqxvsl6jt
+KT0/049wv6.jpg',
+      type: -999999,
+      accountId: Long("32216091"),                                                            
+      linkedService: undefined,                                                               
+      statusMessage: '',
+      openToken: undefined,                                                                   
+      memberType: undefined,                                                                  
+      profileType: undefined,                                                                 
+      linkId: undefined,                                                                      
+      pv: undefined                                                                           
+    }                                                                                         
+  }                                                                                           
+]
+
+
+
+
+
+
+---------------profile---------------                                                         
+{                                                                                             
+  profile: {                                                                                  
+    userId: 6266858,
+    suspended: false,
+    profileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl9D1/
+liv3ru_110x110_c.jpg',
+    fullProfileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl
+9D1/liv3ru_640x640_s.jpg',
+    originalProfileImageUrl: 'http://p.talk.kakao.co.kr/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl9D
+1/liv3ru.jpg',
+    backgroundImageUrl: 'http://p.talk.kakao.co.kr/talkp/wljv8vVf9L/KhHyyQeeO9X4SS0I6fvwM0/xv5
+5dc.jpg',
+    originalBackgroundImageUrl: 'http://p.talk.kakao.co.kr/talkp/wljv8vVf9L/KhHyyQeeO9X4SS0I6f
+vwM0/xv55dc.jpg',
+    statusMessage: '',
+    decoration: [ [Object], [Object], [Object], [Object] ],
+    musics: { total: 13, contentsInfo: [Array], status: 0 },
+    action: {                                                                                 
+      title: '애월낙조',
+      description: '장필순',
+      type: 'melon',
+      url: 'kakaotalk://melon?action=playmusic&type=song&media=5521021&mediaid=5521021&menuid=
+1000001316',
+      webUrl: 'http://www.melon.com/webplayer/mini.htm?contsType=S&ref=W20305&contsIds=5521021
+',
+      meta: [Object],
+      iconUrl: [Object],
+      previewIconUrl: [Object],
+      screenIconUrl: [Object],
+      isMood: false,
+      isTalkBadge: false,
+      downloadId: ''
+    },                                                                                        
+    feeds: { feeds: [], last: false },
+    profileFeeds: { feeds: [Array], totalCnt: 13 },
+    backgroundFeeds: { feeds: [Array], totalCnt: 9 },
+    allowStory: true,
+    allowStoryPost: true,
+    storyWebUrl: 'https://story.kakao.com/hnk0203',
+    storyNewBadgeToken: 1580657484,
+    allowPay: true,
+    screenToken: 1598664146938,
+    hasProfile2Photos: false,
+    meBadge: false
+  },                                                                                          
+  status: 0,
+  lastSeenAt: 1607750746
+}                                                                                             
+---------------info---------------                                                            
+{                                                                                             
+  friend: {                                                                                   
+    userId: 6266858,
+    nickName: '혁수',
+    profileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl9D1/
+liv3ru_110x110_c.jpg',
+    fullProfileImageUrl: 'http://th-p.talk.kakao.co.kr/th/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl
+9D1/liv3ru_640x640_s.jpg',
+    type: 2,
+    phoneNumber: '01042013788',
+    statusMessage: '',
+    UUID: 'huksu0203',
+    friendNickName: '장혁수',
+    accountId: 2619870,
+    originalProfileImageUrl: 'http://p.talk.kakao.co.kr/talkp/wlobPrQsio/LjBO4KnKucfeVXChPcl9D
+1/liv3ru.jpg',
+    userType: 0,
+    ext: {},                                                                                  
+    hidden: false,
+    purged: false,
+    favorite: false,
+    screenToken: 1598664146938,
+    suspended: false,
+    directChatId: 0
+  },                                                                                          
+  token: 1607750746,
+  status: 0
+}                                                                                             
+  
+
+
+TextChat {                                                                                    
+  rawAttachment: {},                                                                          
+  channel: ManagedNormalChatChannel {                                                         
+    _events: [Object: null prototype] {},                                                     
+    _eventsCount: 0,
+    _maxListeners: undefined,                                                                 
+    manager: ChannelManager { map: [Map], client: [TalkClient] },
+    id: Long("174726625044834"),                                                              
+    dataStruct: {                                                                             
+      channelId: Long("174726625044834"),                                                     
+      type: 'DirectChat',
+      activeMemberCount: 2,
+      newMessageCount: 2,
+      lastUpdatedAt: null,                                                                    
+      lastMessage: null,                                                                      
+      lastLogId: Long("2401133237348732928"),                                                 
+      lastSeenLogId: Long("0"),                                                               
+      lastChatLog: [Object],
+      metadata: null,                                                                         
+      displayMemberList: [Array],
+      pushAlert: true,
+      channelMetaList: [Array],
+      isDirectChat: undefined,                                                                
+      linkId: undefined,                                                                      
+      openToken: undefined                                                                    
+    },                                                                                        
+    roomImageURL: '',
+    roomFullImageURL: '',
+    lastChat: [Circular],
+    clientRoomImageURL: '',
+    clientRoomFullImageURL: '',
+    clientName: '',
+    clientPushSound: null,                                                                    
+    isFavorite: false,
+    displayUserInfoList: [ [ManagedDisplayUserInfo] ],
+    userInfoMap: Map { '90639365' => [ManagedChatUserInfo] },
+    metaMap: Map { 1 => [Object] },
+    [Symbol(kCapture)]: false
+  },                                                                                          
+  sender: TalkClientChatUser {                                                                
+    _events: [Object: null prototype] {},                                                     
+    _eventsCount: 0,
+    _maxListeners: undefined,                                                                 
+    mainOpenToken: 1598833037,
+    client: TalkClient {                                                                      
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,                                                               
+      configProvider: [DefaultClientConfigProvider],
+      auth: [AuthClient],
+      service: [ServiceClient],
+      openchatWeb: [OpenChatClient],
+      openUploadApi: [OpenUploadApi],
+      channelBoard: [ChannelBoardClient],
+      openChannelBoard: [OpenChannelBoardClient],
+      networkManager: [NetworkManager],
+      channelManager: [ChannelManager],
+      userManager: [UserManager],
+      chatManager: [ChatManager],
+      openLinkManager: [OpenLinkManager],
+      clientUser: [Circular],
+      status: 1,
+      [Symbol(kCapture)]: false
+    },                                                                                        
+    id: Long("246786864"),                                                                    
+    mainUserInfo: TalkClientUserInfo { user: [Circular], settings: [Object] },
+    [Symbol(kCapture)]: false
+  },                                                                                          
+  logId: Long("2401133703705010177"),                                                         
+  prevLogId: Long("2401133237348732928"),                                                     
+  text: '음',
+  messageId: 856949364,
+  sendTime: 1607174642,
+  attachmentList: [],                                                                         
+  mentionMap: Map {}                                                                          
+} 

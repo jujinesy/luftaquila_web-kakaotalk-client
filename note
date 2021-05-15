@@ -1,0 +1,10 @@
+jwt refresh on expire
+
+
+li.contacts-item > a.contacts-link > div.avatar
+  .avatar-online -> green dot on top right
+  .avatar-offline -> gray dot on top right
+  .avatar-busy -> pink
+  .avatar-away -> yellow
+
+resources/app.js eventListeners does not work b/c of dynamically loaded.
